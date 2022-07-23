@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+        :root {
+            --pale-blue: hsl(225, 100%, 94%);
+            --bright-blue: hsl(245, 75%, 52%);
+            --very-pale-blue: hsl(225, 100%, 98%);
+            --desaturated-blue: hsl(224, 23%, 55%);
+            --dark-blue: hsl(223, 51%, 23%);
+        }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 16px;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            padding: 0px;
+            margin: 0px;
+            background: var(--pale-blue);
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url(pattern-background-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top;
+            z-index: -1;
+        }
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 300px;
+            min-height: 400px;
+            margin: 60px auto;
+            border-radius: 10px;
+            background: white;
+        }
+        .box .box-header {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .box .box-header img {
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .box .box-body {
+            width: 100%;
+            height: auto;
+            padding: 25px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .box .box-body .box-title {
+            width: 100%;
+            font-weight:800;
+            color: var(--dark-blue);
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .box .box-body .box-text {
+            width: 100%;
+            color: var(--desaturated-blue);
+            text-align: center;
+            line-height: 25px;
+            padding: 15px 0px;
+            box-sizing: border-box;
+        }
+        .box .box-body .box-plan {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 15px;
+            background: var(--very-pale-blue);
+            border-radius: 10px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .box .box-body .box-plan .box-plan-img {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .box .box-body .box-plan .box-plan-text {
+            flex-grow: 6;
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+        }
+        .box .box-body .box-plan .box-plan-text .box-plan-title {
+            color: var(--dark-blue);
+            font-weight: 900;
+            font-size: 13px;
+        }
+        .box .box-body .box-plan .box-plan-text .box-plan-price {
+            color: var(--desaturated-blue);
+            font-size: 14px;
+        }
+        .box .box-body .box-plan .box-plan-link {
+            flex-grow: 1;
+        }
+        .box .box-body .box-plan .box-plan-link a {
+            color: var(--bright-blue);
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .box .box-body .box-plan .box-plan-link a:hover {
+            color: #695df3;
+            text-decoration: none;;
+        }
+        .box .box-body .box-payment-button {
+            padding: 25px 0px 15px;
+            box-sizing: border-box;
+        }
+        .box .box-body .box-payment-button button {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background: var(--bright-blue);
+            color: white;
+            font-weight: 700;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px 0px rgba(76, 61, 240, 0.44);
+            cursor: pointer;
+        }
+        .box .box-body .box-payment-button button:hover {
+            background: #766bf1;
+        }
+        .box .box-body .box-cancel-button {
+            padding: 15px 0px;
+            box-sizing: border-box;
+        }
+        .box .box-body .box-cancel-button button {
+            width: 100%;
+            border: 0;
+            background: none;
+            color: var(--desaturated-blue);
+            font-weight: 900;
+            text-align: center;
+            cursor: pointer;
+        }
+        .box .box-body .box-cancel-button button:hover {
+            color: var(--dark-blue);
+        }
+        
+
+        @media (max-width: 370px) {
+            body {
+                height: auto;
+            }
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: url(pattern-background-mobile.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: top;
+                z-index: -1;
+            }
+            
+        }
